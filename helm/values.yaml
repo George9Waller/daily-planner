@@ -12,7 +12,9 @@ image:
   pullPolicy: Always
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-imagePullSecrets: []
+imagePullSecrets:
+  - name: ecr-registry-secret
+
 # This is to override the chart name.
 nameOverride: ""
 fullnameOverride: ""
@@ -121,4 +123,4 @@ tolerations: []
 affinity: {}
 
 env:
-  IMAGE_TAG: '9f268044bcb91f2be029fbd34474f50bdbb65870'
+  IMAGE_TAG: '674823d2519e37ebacb3921a13af65f5ed87e3db'
