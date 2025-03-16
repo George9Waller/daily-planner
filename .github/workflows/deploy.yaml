@@ -34,27 +34,22 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v2
 
     - name: Build, tag and push image to ECR
+      id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         REPOSITORY: daily-planner
-        IMAGE_TAG: latest
+        IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
+      outputs:
+        image_tag: $IMAGE_TAG
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-
-    - name: Sync
-      env:
-        ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
-        ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
+    - name: Update image tag in Helm values
       run: |
-        kubectl config use-context ${{ vars.KUBE_CONTEXT }}
-        kubectl apply -f argocd-app.yaml
-        argocd app sync daily-planner
+        sed -i "s|IMAGE_TAG:.*|IMAGE_TAG: '${{ steps.build-image.outputs.image_tag }}'|" helm/values.yaml
+        git config --global user.email "${{ vars.GITHUB_ACTOR_ID }}@users.noreply.github.com"
+        git config --global user.name "${{ vars.GITHUB_ACTOR }}"
+        git add helm/values.yaml
+        git commit -m "Update image tag to ${{ steps.build-image.outputs.image_tag }}"
+        git push
