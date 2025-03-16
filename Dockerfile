@@ -17,3 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 RUN bash /app/scripts/translations
+
+RUN chmod +x /app/scripts/start
+RUN chmod +x /app/scripts/migrate
+RUN chmod +x /app/scripts/listen-for-print
