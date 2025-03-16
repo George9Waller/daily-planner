@@ -64,5 +64,5 @@ jobs:
       run: |
         sed -i "s|IMAGE_TAG:.*|IMAGE_TAG: '${{ github.sha }}'|" helm/values.yaml
         git add helm/values.yaml
-        git commit -m "Update image tag to ${{ steps.build-image.outputs.image_tag }}"
+        git commit -m "Update image tag to ${{ github.sha }}"
         git push
