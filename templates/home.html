@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ _("home.title") }}</h1>
+<div class="list-container">
+    <div class="">
+        <div class="column">
+            <div class="item">
+                <div class="column">
+                    <h2>{{ _("home.print_now.title") }}</h2>
+                    {% if printer_is_online %}
+                        <small style="color: green">{{ _("printer.online") }}</small>
+                    {% else %}
+                        <small style="color: red">{{ _("printer.offline") }}</small>
+                    {% endif %}
+                </div>
+                <form action="/print" method="post">
+                    <button type="submit">{{ _("home.print_now.print_button") }}</button>
+                </form>
+            </div>
+            {% for job in recent_print_jobs %}
+                <div class="item column narrow">
+                    <p>
+                        {% if job.status == "FAILED" %}❌{% elif job.status == "WARNING" %}⚠️{% else %}✅{% endif %}
+                        {{ job.created|datetimeformat }}
+                    </p>
+                    {% if job.status != "SUCCESS" %}
+                        <code>{{ job.errors }}</code>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="item">
+        {% if recent_receipt %}
+            {{ recent_receipt|safe }}
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,84 @@
+# French (France) translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-14 22:33+0000\n"
+"PO-Revision-Date: 2025-02-02 16:10+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: printing/data/components/greeting.py:9
+msgid "printing.greeting.1"
+msgstr "Bonjour"
+
+#: printing/data/components/greeting.py:10
+msgid "printing.greeting.2"
+msgstr "Salut"
+
+#: printing/data/components/greeting.py:11
+msgid "printing.greeting.3"
+msgstr "Âllo"
+
+#: printing/execute/components/dailies.py:11
+msgid "print.dailies"
+msgstr "Tâches quotidiennes"
+
+#: printing/execute/components/habits.py:11
+msgid "print.habits"
+msgstr "Habitudes"
+
+#: printing/execute/components/reflection.py:11
+msgid "print.Reflection"
+msgstr "Introspection"
+
+#: printing/execute/components/reflection.py:14
+msgid "print.whatwentwell"
+msgstr "Qu'est-ce qui s'est bien passé ?"
+
+#: printing/execute/components/reflection.py:18
+msgid "print.whatcouldbebetter"
+msgstr "Qu'est-ce qui pourrait être mieux ?"
+
+#: printing/execute/components/todos.py:11
+msgid "print.whatson"
+msgstr "Ce qui se passe"
+
+#: printing/execute/components/todos.py:13
+msgid "print.todos"
+msgstr "Tâches à faire"
+
+#: printing/execute/components/weather.py:209
+msgid "print.Weather"
+msgstr "Météo"
+
+#: routes/__init__.py:17
+msgid "printer.online"
+msgstr "en ligne"
+
+#: routes/__init__.py:17
+msgid "printer.offline"
+msgstr "hors ligne"
+
+#: templates/home.html:4
+msgid "home.title"
+msgstr "Bonjour"
+
+#: templates/home.html:10
+msgid "home.print_now.title"
+msgstr "Imprimer maintenant"
+
+#: templates/home.html:14
+msgid "home.print_now.print_button"
+msgstr "imprimer"
+

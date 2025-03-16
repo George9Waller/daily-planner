@@ -1,0 +1,11 @@
+#bin/bash
+
+source env/bin/activate
+
+while true; do
+    read -n 1 -s key
+    if [[ $key == "p" ]]; then
+        echo "Printing"
+        flask print-now
+    fi
+done

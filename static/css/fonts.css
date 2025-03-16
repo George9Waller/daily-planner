@@ -1,0 +1,279 @@
+/* Atipo Foundry Font: Nudica Mono */
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-thin-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-thin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-thin-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-thin-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-thin-webfont.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-thinitalic-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-thinitalic-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-thinitalic-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-thinitalic-webfont.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-ultralight-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-ultralight-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-ultralight-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-ultralight-webfont.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-ultralightitalic-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-ultralightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-ultralightitalic-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-ultralightitalic-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-ultralightitalic-webfont.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-light-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-light-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-light-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-light-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-lightitalic-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-lightitalic-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-lightitalic-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-lightitalic-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-regular-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-regular-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-regular-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-regularitalic-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-regularitalic-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-regularitalic-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-regularitalic-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-medium-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-medium-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-medium-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-medium-webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-mediumitalic-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-mediumitalic-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-mediumitalic-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-mediumitalic-webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-bold-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-bold-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-bold-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'nudica-mono';
+  src: url('/static/fonts/nudica-mono/nudicamono-bolditalic-webfont.eot');
+  src: url('/static/fonts/nudica-mono/nudicamono-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/nudica-mono/nudicamono-bolditalic-webfont.woff2') format('woff2'),
+       url('/static/fonts/nudica-mono/nudicamono-bolditalic-webfont.woff') format('woff'),
+       url('/static/fonts/nudica-mono/nudicamono-bolditalic-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-family: monospace;
+}
+
+
+/* Atipo Foundry Font: Noway */
+@font-face {
+  font-family: 'noway-icons';
+  src: url('/static/fonts/noway/noway-icons-webfont.eot');
+  src: url('/static/fonts/noway/noway-icons-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway-icons-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway-icons-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway-icons-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway-icons-webfont.svg#noway_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway-thin-webfont.eot');
+  src: url('/static/fonts/noway/noway-thin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway-thin-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway-thin-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway-thin-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway-thin-webfont.svg#nowaythin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway_thin_italic-webfont.eot');
+  src: url('/static/fonts/noway/noway_thin_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway_thin_italic-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway_thin_italic-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway_thin_italic-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway_thin_italic-webfont.svg#nowaythin') format('svg');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway-light-webfont.eot');
+  src: url('/static/fonts/noway/noway-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway-light-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway-light-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway-light-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway-light-webfont.svg#nowaythin') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway_light_italic-webfont.eot');
+  src: url('/static/fonts/noway/noway_light_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway_light_italic-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway_light_italic-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway_light_italic-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway_light_italic-webfont.svg#nowaythin') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway-regular-webfont.eot');
+  src: url('/static/fonts/noway/noway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway-regular-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway-regular-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway-regular-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway-regular-webfont.svg#nowaythin') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway_regular_italic-webfont.eot');
+  src: url('/static/fonts/noway/noway_regular_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway_regular_italic-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway_regular_italic-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway_regular_italic-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway_regular_italic-webfont.svg#nowaythin') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway-medium-webfont.eot');
+  src: url('/static/fonts/noway/noway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway-medium-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway-medium-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway-medium-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway-medium-webfont.svg#nowaythin') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway_medium_italic-webfont.eot');
+  src: url('/static/fonts/noway/noway_medium_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway_medium_italic-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway_medium_italic-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway_medium_italic-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway_medium_italic-webfont.svg#nowaythin') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway-bold-webfont.eot');
+  src: url('/static/fonts/noway/noway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway-bold-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway-bold-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway-bold-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway-bold-webfont.svg#nowaythin') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noway';
+  src: url('/static/fonts/noway/noway_bold_italic-webfont.eot');
+  src: url('/static/fonts/noway/noway_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/noway/noway_bold_italic-webfont.woff2') format('woff2'),
+       url('/static/fonts/noway/noway_bold_italic-webfont.woff') format('woff'),
+       url('/static/fonts/noway/noway_bold_italic-webfont.ttf') format('truetype'),
+       url('/static/fonts/noway/noway_bold_italic-webfont.svg#nowaythin') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}

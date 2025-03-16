@@ -1,0 +1,12 @@
+# bin/bash
+
+source env/bin/activate
+
+pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
+
+# init for new languages
+# pybabel init -i messages.pot -d translations -l en_GB
+
+pybabel update -i messages.pot -d translations
+
+pybabel compile -d translations

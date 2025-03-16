@@ -1,0 +1,13 @@
+__pycache__/**
+*.cpython*
+.DS_Store
+
+env/**
+.env
+
+**/messages.mo
+messages.pot
+.pot
+
+img.png
+

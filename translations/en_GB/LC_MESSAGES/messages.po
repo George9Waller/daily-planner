@@ -1,0 +1,84 @@
+# English (United Kingdom) translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-14 22:33+0000\n"
+"PO-Revision-Date: 2025-02-02 16:10+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_GB\n"
+"Language-Team: en_GB <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: printing/data/components/greeting.py:9
+msgid "printing.greeting.1"
+msgstr "Hello"
+
+#: printing/data/components/greeting.py:10
+msgid "printing.greeting.2"
+msgstr "Hi"
+
+#: printing/data/components/greeting.py:11
+msgid "printing.greeting.3"
+msgstr "Hey"
+
+#: printing/execute/components/dailies.py:11
+msgid "print.dailies"
+msgstr "Dailies"
+
+#: printing/execute/components/habits.py:11
+msgid "print.habits"
+msgstr "Habits"
+
+#: printing/execute/components/reflection.py:11
+msgid "print.Reflection"
+msgstr "Reflection"
+
+#: printing/execute/components/reflection.py:14
+msgid "print.whatwentwell"
+msgstr "What went well?"
+
+#: printing/execute/components/reflection.py:18
+msgid "print.whatcouldbebetter"
+msgstr "What could be better?"
+
+#: printing/execute/components/todos.py:11
+msgid "print.whatson"
+msgstr "What's on"
+
+#: printing/execute/components/todos.py:13
+msgid "print.todos"
+msgstr "Todos"
+
+#: printing/execute/components/weather.py:209
+msgid "print.Weather"
+msgstr "Weather"
+
+#: routes/__init__.py:17
+msgid "printer.online"
+msgstr "online"
+
+#: routes/__init__.py:17
+msgid "printer.offline"
+msgstr "offline"
+
+#: templates/home.html:4
+msgid "home.title"
+msgstr "Hello"
+
+#: templates/home.html:10
+msgid "home.print_now.title"
+msgstr "Print now"
+
+#: templates/home.html:14
+msgid "home.print_now.print_button"
+msgstr "print"
+
