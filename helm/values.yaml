@@ -123,4 +123,4 @@ tolerations: []
 affinity: {}
 
 env:
-  IMAGE_TAG: '73c8da3e8e442685ab19997719afdb1f893f8a5d'
+  IMAGE_TAG: '82de3afda4f6ea8c128f3f16f319f567b7069782'
