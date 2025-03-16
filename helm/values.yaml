@@ -123,4 +123,4 @@ tolerations: []
 affinity: {}
 
 env:
-  IMAGE_TAG: latest
+  IMAGE_TAG: '674823d2519e37ebacb3921a13af65f5ed87e3db'
