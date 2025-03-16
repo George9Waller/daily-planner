@@ -42,12 +42,10 @@ jobs:
       run: |
         docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
-      outputs:
-        image_tag: $IMAGE_TAG
 
     - name: Update image tag in Helm values
       run: |
-        sed -i "s|IMAGE_TAG:.*|IMAGE_TAG: '${{ steps.build-image.outputs.image_tag }}'|" helm/values.yaml
+        sed -i "s|IMAGE_TAG:.*|IMAGE_TAG: '${{ github.sha }}'|" helm/values.yaml
         git config --global user.email "${{ vars.GITHUB_ACTOR_ID }}@users.noreply.github.com"
         git config --global user.name "${{ vars.GITHUB_ACTOR }}"
         git add helm/values.yaml
