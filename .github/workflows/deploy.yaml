@@ -37,3 +37,19 @@ jobs:
       run: |
         docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Sync
+      env:
+        ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
+        ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
+      run: |
+        kubectl config use-context ${{ env.KUBE_CONTEXT }}
+        kubectl apply -f argocd-app.yaml
+        argocd app sync daily-planner

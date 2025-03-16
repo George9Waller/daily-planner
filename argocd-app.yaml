@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: daily-planner
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/George9Waller/daily-planner.git'
+    targetRevision: main
+    path: 'k8s-manifests'
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

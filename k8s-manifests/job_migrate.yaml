@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migrate
+spec:
+  template:
+    spec:
+      containers:
+        - name: migrate
+          image: 810574566145.dkr.ecr.eu-west-2.amazonaws.com/daily-planner:latest
+          command: ["/bin/bash", "scripts/migrate"]
+      restartPolicy: OnFailure
