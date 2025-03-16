@@ -43,11 +43,26 @@ jobs:
         docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
 
+  update-image-tag:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Configure git
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+
+    - name: Authenticate with GitHub
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/George9Waller/${{ github.repository }}.git
+
     - name: Update image tag in Helm values
       run: |
         sed -i "s|IMAGE_TAG:.*|IMAGE_TAG: '${{ github.sha }}'|" helm/values.yaml
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
         git add helm/values.yaml
         git commit -m "Update image tag to ${{ steps.build-image.outputs.image_tag }}"
         git push
