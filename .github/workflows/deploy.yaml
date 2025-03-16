@@ -58,7 +58,7 @@ jobs:
 
     - name: Authenticate with GitHub
       run: |
-        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/George9Waller/${{ github.repository }}.git
+        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/${{ github.repository }}.git
 
     - name: Update image tag in Helm values
       run: |
