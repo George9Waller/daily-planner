@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.repository }}-deploy-main
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,6 +43,7 @@ jobs:
         docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -50,6 +55,6 @@ jobs:
         ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
         ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
       run: |
-        kubectl config use-context ${{ env.KUBE_CONTEXT }}
+        kubectl config use-context ${{ vars.KUBE_CONTEXT }}
         kubectl apply -f argocd-app.yaml
         argocd app sync daily-planner
