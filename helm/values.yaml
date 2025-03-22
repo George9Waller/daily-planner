@@ -125,4 +125,4 @@ affinity: {}
 awsSecretsKey: daily-planner
 
 env:
-  IMAGE_TAG: '82de3afda4f6ea8c128f3f16f319f567b7069782'
+  IMAGE_TAG: '81bcc027ebc6a733e4a4cdff2a66d2485476902b'
