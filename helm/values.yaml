@@ -122,5 +122,7 @@ tolerations: []
 
 affinity: {}
 
+awsSecretsKey: daily-planner
+
 env:
   IMAGE_TAG: '82de3afda4f6ea8c128f3f16f319f567b7069782'
