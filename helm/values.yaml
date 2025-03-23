@@ -41,7 +41,8 @@ podLabels: {}
 podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  privileged: true
   # capabilities:
   #   drop:
   #   - ALL
@@ -72,15 +73,11 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: 
+resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  limits:
-    akri.sh/akri-receipt-printer: "1"
-  requests:
-    akri.sh/akri-receipt-printer: "1"
 
 # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 livenessProbe:
@@ -101,10 +98,15 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes: []
+volumes:
+  - name: usb
+    hostPath:
+      path: /dev/usb/lp0
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
+volumeMounts:
+  - name: usb
+    mountPath: /dev/usb/lp0
 
 nodeSelector: {}
 
@@ -138,12 +140,3 @@ envFrom:
 postgresql:
   database: daily-planner-db
   username: db-user
-
-
-akri:
-  kubenetesDistro: k3s
-  udev:
-    discovery:
-      enabled: true
-  webhookConfiguration:
-    enabled: false
