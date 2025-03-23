@@ -1,0 +1,8 @@
+apiVersion: v1
+type: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  namespace: {{ .Release.Namespace }}
+data:
+  BABBEL_DEFAULT_LOCALE: fr_FR
+  HABITICA_USER_ID: 4d2d5719-ee22-45bf-9feb-4513cdc5764b
