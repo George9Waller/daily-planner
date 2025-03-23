@@ -122,6 +122,8 @@ tolerations: []
 
 affinity: {}
 
+appName: daily-planner
+
 awsSecretsKey: daily-planner
 
 env:
@@ -129,9 +131,9 @@ env:
 
 envFrom:
   - configMapRef:
-      name: {{ .Release.Name }}-config
+      name: daily-planner-config
   - secretRef:
-      name: {{ .Release.Name }}-aws-secrets
+      name: daily-planner-aws-secrets
 
 postgresql:
   database: daily-planner-db

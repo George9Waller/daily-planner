@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-config
+  name: {{ .Values.appName }}-config
   namespace: {{ .Release.Namespace }}
 data:
   BABBEL_DEFAULT_LOCALE: fr_FR
