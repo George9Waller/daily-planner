@@ -1,9 +1,3 @@
 #bin/bash
 
-while true; do
-    read -n 1 -s key
-    if [[ $key == "p" ]]; then
-        echo "Printing"
-        flask print-now
-    fi
-done
+python3 printing/execute/listen_for_key_and_print.py
