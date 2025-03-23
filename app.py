@@ -24,7 +24,9 @@ app.add_url_rule("/print", view_func=routes.print_now, methods=["POST"])
 # internationalization
 def get_locale():
     # TODO: add en_GB back
-    return request.accept_languages.best_match(["fr_FR"])
+    if request:
+        return request.accept_languages.best_match(["fr_FR"])
+    return os.environ.get("BABEL_DEFAULT_LOCALE")
 
 
 babel = Babel(
