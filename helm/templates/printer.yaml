@@ -1,7 +1,7 @@
 apiVersion: akri.sh/v0
 kind: Configuration
 metadata:
-  name: akri-3dprinter
+  name: akri-receipt-printer
 spec:
   capacity: 1
   discoveryHandler:
