@@ -134,7 +134,7 @@ deploymentEnv:
       name: daily-planner-aws-secrets
       key: POSTGRES_PASSWORD
 - name: DATABASE_URL
-  value: "postgresql://{{ .Values.postgresql.username }}:$(POSTGRES_PASSWORD)@{{ .Release.Name }}-postgres:5432/{{ .Values.postgresql.database }}"
+  value: "postgresql://db-user:$(POSTGRES_PASSWORD)@daily-planner-postgres:5432/daily-planner-db"
 
 envFrom:
   - configMapRef:
@@ -142,6 +142,7 @@ envFrom:
   - secretRef:
       name: daily-planner-aws-secrets
 
+# If changed, reflect in db url above
 postgresql:
   database: daily-planner-db
   username: db-user

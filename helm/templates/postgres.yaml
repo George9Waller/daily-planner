@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .Release.Name }}-postgres-pvc
+  name: {{ .Values.appName }}-postgres-pvc
   namespace: {{ .Release.Namespace }}
 spec:
   accessModes:
@@ -13,30 +13,30 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-postgres
+  name: {{ .Values.appName }}-postgres
   namespace: {{ .Release.Namespace }}
 spec:
   ports:
     - port: 5432
       targetPort: 5432
   selector:
-    app: {{ .Release.Name }}-postgres
+    app: {{ .Values.appName }}-postgres
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Name }}-postgres
+  name: {{ .Values.appName }}-postgres
   namespace: {{ .Release.Namespace }}
 spec:
-  serviceName: {{ .Release.Name }}-postgres
+  serviceName: {{ .Values.appName }}-postgres
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-postgres
+      app: {{ .Values.appName }}-postgres
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-postgres
+        app: {{ .Values.appName }}-postgres
     spec:
       containers:
         - name: postgres
@@ -59,4 +59,4 @@ spec:
       volumes:
         - name: postgres-storage
           persistentVolumeClaim:
-            claimName: {{ .Release.Name }}-postgres-pvc
+            claimName: {{ .Values.appName }}-postgres-pvc
