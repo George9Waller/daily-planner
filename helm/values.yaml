@@ -38,8 +38,8 @@ podAnnotations: {}
 # For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 podLabels: {}
 
-podSecurityContext:
-  fsGroup: 7
+podSecurityContext: {}
+  # fsGroup: 2000
 
 securityContext: {}
   # capabilities:
@@ -146,3 +146,10 @@ envFrom:
 postgresql:
   database: daily-planner-db
   username: db-user
+
+
+akri:
+  kubenetesDistro: k3s
+  udev:
+    discovery:
+      enabled: true

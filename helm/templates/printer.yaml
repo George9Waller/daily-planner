@@ -1,0 +1,12 @@
+apiVersion: akri.sh/v0
+kind: Configuration
+metadata:
+  name: akri-3dprinter
+spec:
+  capacity: 1
+  discoveryHandler:
+    discoveryDetails: |
+      groupRecursive: true # Recommended unless using very exact udev rules
+      udevRules:
+      - ATTRS{idVendor}=="04b8", ATTRS{idProduct}=="0e02"
+    name: udev
