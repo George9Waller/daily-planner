@@ -126,3 +126,7 @@ awsSecretsKey: daily-planner
 
 env:
   IMAGE_TAG: '371f78b9139111811780a15a7c502b6b723c9e4e'
+
+postgresql:
+  database: daily-planner-db
+  username: db-user
