@@ -56,7 +56,7 @@ spec:
           {{- end }}
           envFrom:
             - configMapRef: {{ .Release.Name }}-config
-            - secretRef: {{ Release.Name }}-aws-secrets
+            - secretRef: {{ .Release.Name }}-aws-secrets
           env:
             - DATABASE_URL: "postgresql://{{ .Values.postgresql.username }}:$(POSTGRES_PASSWORD)@{{ .Release.Name }}-postgres:5432/{{ .Values.postgresql.database }}"
       {{- with .Values.volumes }}
