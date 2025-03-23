@@ -101,16 +101,10 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes:
-  - name: usb-passthrough
-    hostPath:
-      path: /dev/usb
-      type: Directory
+volumes: []
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts:
-  - name: usb-passthrough
-    mountPath: /dev/usb
+volumeMounts: []
 
 nodeSelector: {}
 
@@ -151,3 +145,5 @@ akri:
   udev:
     discovery:
       enabled: true
+  webhookConfiguration:
+    ttlSecondsAfterFinished: 60
