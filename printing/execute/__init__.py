@@ -39,7 +39,7 @@ COMPONENT_TO_METHOD = {
 @retry(
     stop=stop_after_attempt(3),
     retry=retry_if_exception(USBError),
-    wait=wait_exponential_jitter(min=0.5, max=5),
+    wait=wait_exponential_jitter(initial=1, max=5),
 )
 def get_printer():
     return Usb(idVendor=0x04B8, idProduct=0x0E02, profile="TM-T88V")
