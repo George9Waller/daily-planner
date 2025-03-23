@@ -127,6 +127,12 @@ awsSecretsKey: daily-planner
 env:
   IMAGE_TAG: '9dafda7a7c587ae583f89bf51148a8f35a5d0268'
 
+envFrom:
+  - configMapRef:
+      name: {{ .Release.Name }}-config
+  - secretRef:
+      name: {{ .Release.Name }}-aws-secrets
+
 postgresql:
   database: daily-planner-db
   username: db-user
