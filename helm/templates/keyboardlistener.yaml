@@ -68,8 +68,8 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           volumeMounts:
-            - name: keyboard
-              mountPath: /dev/usb/hiddev0
+            - name: inputs-by-id
+              mountPath: /dev/input/by-id
             - name: keyboard-config
               mountPath: /config
           {{- with .Values.volumeMounts }}
