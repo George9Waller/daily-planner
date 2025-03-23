@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migrate-job
+  labels:
+    app: {{ .Release.Name }}
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade  # Runs before install/upgrade
+spec:
+  ttlSecondsAfterFinished: 43200 # 12 hours
+  template:
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: migrate
+          image: "{{ .Values.image.repository }}:{{ .Values.env.IMAGE_TAG }}"
+          command: ["/bin/bash", "scripts/migrate"]
+          envFrom:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.deploymentEnv }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      restartPolicy: OnFailure
+  backoffLimit: 3

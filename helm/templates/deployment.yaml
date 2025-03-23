@@ -58,14 +58,10 @@ spec:
           envFrom:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          {{- with .Values.deploymentEnv }}
           env:
-            - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Release.Name }}-aws-secrets
-                  key: POSTGRES_PASSWORD
-            - name: DATABASE_URL
-              value: "postgresql://{{ .Values.postgresql.username }}:$(POSTGRES_PASSWORD)@{{ .Release.Name }}-postgres:5432/{{ .Values.postgresql.database }}"
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
