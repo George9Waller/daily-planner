@@ -1,3 +1,10 @@
+# Setup
+```
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+
 # Env vars
 - `BABEL_DEFAULT_LOCALE` "fr_FR" or "en_GB"
 - `DATABASE_URL`

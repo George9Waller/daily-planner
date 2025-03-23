@@ -33,11 +33,6 @@ babel = Babel(
     default_locale=os.environ.get("BABEL_DEFAULT_LOCALE"),
 )
 
-with app.app_context():
-    import data.models
-
-    db.create_all()
-
 
 @app.cli.command("print-now")
 def print_now():

@@ -1,4 +1,3 @@
 # bin/bash
 
-flask db stamp head
 flask db upgrade
