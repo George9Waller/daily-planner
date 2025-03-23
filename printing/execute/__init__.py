@@ -2,6 +2,7 @@ import logging
 
 from escpos.exceptions import DeviceNotFoundError
 from escpos.printer import Usb
+from usb.core import USBError
 
 from printing import COMPONENTS
 from printing.data.dataclasses import PrintData
@@ -37,7 +38,7 @@ def get_printer_online_status():
     p = get_printer()
     try:
         return p.is_online()
-    except DeviceNotFoundError:
+    except (DeviceNotFoundError, USBError):
         return False
 
 
@@ -48,7 +49,7 @@ def print_label(print_data: dict):
     try:
         p = get_printer()
         _print_label(p, parsed_print_data)
-    except DeviceNotFoundError:
+    except (DeviceNotFoundError, USBError):
         logger.warning("No printer found")
         return
 
