@@ -64,7 +64,8 @@ spec:
                 secretKeyRef:
                   name: {{ .Release.Name }}-aws-secrets
                   key: POSTGRES_PASSWORD
-            - DATABASE_URL: "postgresql://{{ .Values.postgresql.username }}:$(POSTGRES_PASSWORD)@{{ .Release.Name }}-postgres:5432/{{ .Values.postgresql.database }}"
+            - name: DATABASE_URL
+              value: "postgresql://{{ .Values.postgresql.username }}:$(POSTGRES_PASSWORD)@{{ .Release.Name }}-postgres:5432/{{ .Values.postgresql.database }}"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
