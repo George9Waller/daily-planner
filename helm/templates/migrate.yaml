@@ -4,8 +4,8 @@ metadata:
   name: migrate-job
   labels:
     app: {{ .Release.Name }}
-  annotations:
-    "helm.sh/hook": pre-install,pre-upgrade  # Runs before install/upgrade
+  # annotations:
+  #   "helm.sh/hook": pre-install,pre-upgrade  # Runs before install/upgrade
 spec:
   ttlSecondsAfterFinished: 43200 # 12 hours
   template:
