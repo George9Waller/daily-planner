@@ -99,13 +99,13 @@ autoscaling:
 
 # Additional volumes on the output Deployment definition.
 volumes:
-  - name: usb
+  - name: usb-printer
     hostPath:
       path: /dev/usb/lp0
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
-  - name: usb
+  - name: usb-printer
     mountPath: /dev/usb/lp0
 
 nodeSelector: {}
