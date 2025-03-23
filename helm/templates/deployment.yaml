@@ -54,8 +54,10 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          {{- with .Values.envFrom }}
           envFrom:
-          {{- toYaml .Values.envFrom | nindent 6 }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
           env:
             - name: POSTGRES_PASSWORD
               valueFrom:
