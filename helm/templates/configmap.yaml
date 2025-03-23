@@ -4,5 +4,5 @@ metadata:
   name: {{ .Values.appName }}-config
   namespace: {{ .Release.Namespace }}
 data:
-  BABBEL_DEFAULT_LOCALE: fr_FR
+  BABEL_DEFAULT_LOCALE: fr_FR
   HABITICA_USER_ID: 4d2d5719-ee22-45bf-9feb-4513cdc5764b
