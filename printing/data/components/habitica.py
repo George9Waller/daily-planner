@@ -22,7 +22,7 @@ def _transform_habits(habits):
 
 def _transform_todos(todos):
     def should_include_todo(todo):
-        due_date = todo["date"]
+        due_date = todo.get("date")
         if not due_date:
             return True
         return date.today() >= datetime.fromisoformat(due_date).date()

@@ -1,4 +1,4 @@
-# Configure akri for USB printer
+# Configure USB printer
 ```
 lsusb
 dmesg | grep -i usb
