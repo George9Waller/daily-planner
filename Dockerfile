@@ -2,10 +2,6 @@
 
 FROM python:3.13-slim
 
-RUN groupadd -g 1001 lp
-RUN useradd -m -G lp appuser
-USER appuser
-
 RUN apt-get update && apt-get install -y \
     gettext \
     build-essential \
