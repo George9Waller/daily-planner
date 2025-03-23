@@ -120,7 +120,7 @@ appName: daily-planner
 awsSecretsKey: daily-planner
 
 env:
-  IMAGE_TAG: '331298c18379b223f3cc5143bb2936bfd060b2be'
+  IMAGE_TAG: '9aa70d25f74a7e473ee11cf745a966160de746b5'
 
 deploymentEnv:
 - name: POSTGRES_PASSWORD
