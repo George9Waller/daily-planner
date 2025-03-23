@@ -127,7 +127,7 @@ appName: daily-planner
 awsSecretsKey: daily-planner
 
 env:
-  IMAGE_TAG: 'e1da8b989be59b1b5e8db2b37a8988e1d698b9e9'
+  IMAGE_TAG: '9b9dcfeb5e8a704739ef4b75ad99d004fab26145'
 
 envFrom:
   - configMapRef:
