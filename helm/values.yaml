@@ -125,7 +125,7 @@ affinity: {}
 awsSecretsKey: daily-planner
 
 env:
-  IMAGE_TAG: '0174d4a874fdcc09beb4770a5f92bf2c9b4f7198'
+  IMAGE_TAG: 'a48a15803f1080868696cb43b072815f4485df78'
 
 postgresql:
   database: daily-planner-db
