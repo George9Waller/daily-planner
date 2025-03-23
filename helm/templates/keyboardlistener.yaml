@@ -40,7 +40,7 @@ spec:
             - -c
             - |
               echo "Detecting keyboard id..."
-              KEYBOARD_PATH=$(ls /input-devices | grep -- '-kbd$' | head -n 1)
+              KEYBOARD_PATH=$(ls /dev/input/by-id | grep -- '-kbd$' | head -n 1)
               if [ -n "$KEYBOARD_PATH" ]; then
                 echo "/dev/input/by-id/$KEYBOARD_PATH" > /config/keyboard_path
                 echo "Keyboard device set to: /dev/input/by-id/$KEYBOARD_PATH"
