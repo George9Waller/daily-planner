@@ -103,17 +103,16 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
+volumes:
+  - name: receipt-printer-usb
+    hostPath:
+      path: /dev/usb/lp0
+      type: CharDevice
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+volumeMounts:
+  - name: receipt-printer-usb
+    mountPath: /dev/usb/lp0
 
 nodeSelector: {}
 
