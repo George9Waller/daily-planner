@@ -2,6 +2,12 @@ import logging
 
 from escpos.exceptions import DeviceNotFoundError
 from escpos.printer import Usb
+from tenacity import (
+    retry,
+    retry_if_exception,
+    stop_after_attempt,
+    wait_exponential_jitter,
+)
 from usb.core import USBError
 
 from printing import COMPONENTS
@@ -30,13 +36,18 @@ COMPONENT_TO_METHOD = {
 }
 
 
+@retry(
+    stop=stop_after_attempt(3),
+    retry=retry_if_exception(USBError),
+    wait=wait_exponential_jitter(min=0.5, max=5),
+)
 def get_printer():
     return Usb(idVendor=0x04B8, idProduct=0x0E02, profile="TM-T88V")
 
 
 def get_printer_online_status():
-    p = get_printer()
     try:
+        p = get_printer()
         return p.is_online()
     except (DeviceNotFoundError, USBError):
         return False
