@@ -55,7 +55,7 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           envFrom:
-            {{- toYaml .Values.envFrom | nindent 6 }}
+          {{- toYaml .Values.envFrom | nindent 6 }}
           env:
             - name: POSTGRES_PASSWORD
               valueFrom:
