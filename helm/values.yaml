@@ -146,4 +146,4 @@ akri:
     discovery:
       enabled: true
   webhookConfiguration:
-    ttlSecondsAfterFinished: 60
+    enabled: false
