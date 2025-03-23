@@ -104,15 +104,15 @@ autoscaling:
 
 # Additional volumes on the output Deployment definition.
 volumes:
-  - name: receipt-printer-usb
+  - name: usb-passthrough
     hostPath:
-      path: /dev/usb/lp0
-      type: CharDevice
+      path: /dev/usb
+      type: Directory
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
-  - name: receipt-printer-usb
-    mountPath: /dev/usb/lp0
+  - name: usb-passthrough
+    mountPath: /dev/usb
 
 nodeSelector: {}
 
