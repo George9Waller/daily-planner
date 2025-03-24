@@ -51,7 +51,6 @@ def get_latest_print_jobs(count=10):
             if not job.is_printable:
                 return "FAILED"
             if job.created < created_since_threshold:
-                print(job.created, created_since_threshold)
                 return "STALE"
             return "PENDING"
         if job.state == "SENT":
