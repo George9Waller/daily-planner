@@ -10,11 +10,9 @@ body {
   background-color: #f2f1eb;
 }
 
-h1 {
+h1 {}
 
-}
-
-h2 { 
+h2 {
   margin: 0;
 }
 
@@ -63,14 +61,54 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
 .item {
-  height: fit-content;
   padding: 0.5rem;
-  border: 1px solid black;
   display: flex;
   gap: 1rem;
 }
 
+.container {
+  height: fit-content;
+  border: 1px solid black;
+}
+
 .narrow {
   max-width: 32rem;
+}
+
+.status-strip {
+  display: block;
+  width: 1.5rem;
+  height: "100%";
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  font-size: small;
+  font-family: "nudica-mono";
+}
+
+.STALE {
+  background-color: #f0ad4e;
+}
+
+.FAILED {
+  background-color: #d9534f;
+}
+
+.SENT {
+  background-color: #5cb85c;
+}
+
+.PENDING {
+  background-color: #5bc0de;
+}
+
+.UNKNOWN {
+  background-color: #777;
 }

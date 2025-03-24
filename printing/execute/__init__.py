@@ -60,9 +60,10 @@ def print_label(print_data: dict):
     try:
         p = get_printer()
         _print_label(p, parsed_print_data)
+        return True
     except (DeviceNotFoundError, USBError):
         logger.warning("No printer found")
-        return
+        return False
 
 
 def print_label_as_html(print_data: dict):

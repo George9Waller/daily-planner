@@ -7,7 +7,7 @@ from flask_babel import Babel
 import routes
 from actions.printing import create_instant_print_job
 from data import db, migrate
-from printing.execute import print_label
+from print_queue import run
 
 load_dotenv()
 
@@ -38,5 +38,9 @@ babel = Babel(
 
 @app.cli.command("print-now")
 def print_now():
-    print_data = create_instant_print_job(locale="fr_FR")
-    print_label(print_data)
+    create_instant_print_job(locale="fr_FR")
+
+
+@app.cli.command("run-print-queue")
+def run_print_queue():
+    run()

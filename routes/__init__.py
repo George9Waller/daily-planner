@@ -6,7 +6,7 @@ from actions.printing import (
     get_most_recent_printable_job,
     get_latest_print_jobs,
 )
-from printing.execute import get_printer_online_status, print_label, print_label_as_html
+from printing.execute import get_printer_online_status, print_label_as_html
 from routes.utils import context
 
 
@@ -25,6 +25,5 @@ def home():
 
 
 def print_now():
-    print_data = create_instant_print_job(locale=get_locale().language)
-    print_label(print_data)
+    create_instant_print_job(locale=get_locale().language)
     return redirect("/")

@@ -5,13 +5,13 @@
 <div class="list-container">
     <div class="">
         <div class="column">
-            <div class="item">
+            <div class="item container">
                 <div class="column">
                     <h2>{{ _("home.print_now.title") }}</h2>
                     {% if printer_is_online %}
-                        <small style="color: green">{{ _("printer.online") }}</small>
+                    <small style="color: green">{{ _("printer.online") }}</small>
                     {% else %}
-                        <small style="color: red">{{ _("printer.offline") }}</small>
+                    <small style="color: red">{{ _("printer.offline") }}</small>
                     {% endif %}
                 </div>
                 <form action="/print" method="post">
@@ -19,21 +19,24 @@
                 </form>
             </div>
             {% for job in recent_print_jobs %}
-                <div class="item column narrow">
+            <div class="container narrow row">
+                <div class="status-strip {{ job.state }}">{{ job.state}}</div>
+                <div class="item column">
                     <p>
                         {% if job.status == "FAILED" %}❌{% elif job.status == "WARNING" %}⚠️{% else %}✅{% endif %}
                         {{ job.created|datetimeformat }}
                     </p>
                     {% if job.status != "SUCCESS" %}
-                        <code>{{ job.errors }}</code>
+                    <code>{{ job.errors }}</code>
                     {% endif %}
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
     <div class="item">
         {% if recent_receipt %}
-            {{ recent_receipt|safe }}
+        {{ recent_receipt|safe }}
         {% endif %}
     </div>
 </div>
