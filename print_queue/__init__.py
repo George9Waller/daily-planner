@@ -1,4 +1,5 @@
 import logging
+import os
 import time
 from datetime import datetime, timedelta, timezone
 
@@ -8,9 +9,11 @@ from printing.execute import print_label
 logger = logging.getLogger(__name__)
 
 
-def _get_print_job_or_none(age_threshold=None):
-    _age_threshold = age_threshold or timedelta(minutes=5)
-    created_since_threshold = datetime.now(timezone.utc) - _age_threshold
+def _get_print_job_or_none():
+    threshold_minutes = int(os.environ.get("PRINT_THRESHOLD_MINUTES") or 5)
+    age_threshold = timedelta(minutes=threshold_minutes)
+    created_since_threshold = datetime.now(timezone.utc) - age_threshold
+
     print_job = db.session.execute(
         db.select(
             models.PrintJob.id,
