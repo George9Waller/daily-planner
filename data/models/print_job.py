@@ -1,7 +1,7 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional, Literal
 
-from sqlalchemy import DateTime, func, JSON
+from sqlalchemy import DateTime, JSON
 from sqlalchemy.orm import Mapped, mapped_column
 
 from data import db
@@ -12,7 +12,7 @@ PrintJobState = Literal["PENDING", "SENT"]
 class PrintJob(db.Model):
     id: Mapped[int] = mapped_column(primary_key=True)
     created: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), default=datetime.utcnow()
+        DateTime(timezone=True), default=datetime.now(timezone.utc)
     )
     state: Mapped[PrintJobState] = mapped_column(default="PENDING")
     print_data: Mapped[dict] = mapped_column(JSON())
