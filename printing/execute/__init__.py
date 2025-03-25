@@ -41,29 +41,21 @@ COMPONENT_TO_METHOD = {
     retry=retry_if_exception(USBError),
     wait=wait_exponential_jitter(initial=1, max=5),
 )
-def get_printer():
+def _get_printer():
     return Usb(idVendor=0x04B8, idProduct=0x0E02, profile="TM-T88V")
 
 
-def get_printer_online_status():
+def get_printer():
     try:
-        p = get_printer()
-        return p.is_online()
-    except (DeviceNotFoundError, USBError):
-        return False
-
-
-def print_label(print_data: dict):
-    parsed_print_data = PrintData(**print_data)
-
-    # TODO: configure printer from db
-    try:
-        p = get_printer()
-        _print_label(p, parsed_print_data)
-        return True
+        return _get_printer()
     except (DeviceNotFoundError, USBError):
         logger.warning("No printer found")
-        return False
+        return
+
+
+def print_label(printer: Usb, print_data: dict):
+    parsed_print_data = PrintData(**print_data)
+    _print_label(printer, parsed_print_data)
 
 
 def print_label_as_html(print_data: dict):

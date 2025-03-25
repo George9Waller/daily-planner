@@ -84,13 +84,20 @@ button:focus-visible {
 }
 
 .status-strip {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.5rem;
   height: "100%";
+  padding: 0.2rem 0;
+}
+
+.status-strip > span {
   text-orientation: upright;
   writing-mode: vertical-lr;
   font-size: small;
   font-family: "nudica-mono";
+  text-align: center;
 }
 
 .STALE {
@@ -110,5 +117,5 @@ button:focus-visible {
 }
 
 .UNKNOWN {
-  background-color: #777;
+  background-color: #c4c4c4;
 }
