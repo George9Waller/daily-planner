@@ -150,4 +150,4 @@ redis:
     replicaCount: 0
   auth:
     existingSecret: daily-planner-aws-secrets
-    existingSecretKey: REDIS_PASSWORD
+    existingSecretPasswordKey: REDIS_PASSWORD
