@@ -38,9 +38,6 @@ Locally starts the web server on 127.0.0.1:5000
 1. Collects all translatable strings in the project and updates the `.po` files.
 2. Compiles the `.po` files into `.mo` files used by the server to inject translations.
 
-## `start-hosted`
-Also starts the web server. Used in the deployment chart to start the server in a kubernetes pod as 0.0.0.0:5000
-
 ## `listen-for-print`
 *Only works on linux*
 

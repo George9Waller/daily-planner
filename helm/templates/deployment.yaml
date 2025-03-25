@@ -40,7 +40,14 @@ spec:
           {{- end }}
           image: "{{ .Values.image.repository }}:{{ .Values.env.IMAGE_TAG }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/bash", "scripts/start-hosted"]
+          command:
+            - /bin/bash
+            - gunicorn
+            - "--workers"
+            - "1"
+            - "--bind"
+            - "0.0.0.0:5000"
+            - "app:app"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

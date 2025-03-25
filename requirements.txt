@@ -15,6 +15,7 @@ Flask==3.1.0
 flask-babel==4.0.0
 Flask-Migrate==4.1.0
 Flask-SQLAlchemy==3.1.1
+gunicorn==23.0.0
 idna==3.10
 importlib_resources==6.5.2
 isort==6.0.0
