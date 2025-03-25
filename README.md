@@ -8,12 +8,20 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+# Services
+- A [postgres](https://www.postgresql.org) DB
+- A [redis](https://redis.io) server
+- An [Open Weather](https://openweathermap.org/api) API key
+- A [habitica account](https://habitica.com) with an API token
+
 # Env vars
 - `BABEL_DEFAULT_LOCALE` "fr_FR" or "en_GB"
 - `DATABASE_URL`
 - `OPEN_WEATHER_API_KEY`
 - `HABITICA_USER_ID`
 - `HABITICA_API_TOKEN`
+- `REDIS_HOST`
+- `REDIS_PORT`
 
 # Scripts
 ## `makemigrations`

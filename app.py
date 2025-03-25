@@ -6,6 +6,7 @@ from flask_babel import Babel
 
 import routes
 from actions.printing import create_instant_print_job
+from cache import redis  # noqa F401, imported to initialise client
 from data import db, migrate
 from print_queue import run
 
