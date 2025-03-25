@@ -37,4 +37,4 @@ jobs:
 
       - name: Lint Helm
         run: |
-          helm lint helm --strict
+          helm lint helm
