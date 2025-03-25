@@ -42,3 +42,6 @@ Locally starts the web server on 127.0.0.1:5000
 *Only works on linux*
 
 Starts a process listening for the p key to be pressed on a mounted keyboard device and triggers a print job
+
+## `lint`
+Lints with black, isort and helm. The same linting is done in GitHub actions on PRs
