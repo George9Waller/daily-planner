@@ -41,7 +41,6 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.env.IMAGE_TAG }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
-            - /bin/bash
             - gunicorn
             - "--workers"
             - "1"
