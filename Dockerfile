@@ -19,6 +19,5 @@ COPY . .
 
 RUN bash /app/scripts/translations
 
-RUN chmod +x /app/scripts/start-hosted
 RUN chmod +x /app/scripts/migrate
 RUN chmod +x /app/scripts/listen-for-print
