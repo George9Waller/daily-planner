@@ -6,7 +6,7 @@ from flask_babel import Babel
 
 import routes
 from actions.printing import create_instant_print_job
-from cache import redis  # noqa F401, imported to initialise client
+from cache.actions import set_printer_is_online
 from data import db, migrate
 from print_queue import run
 
@@ -35,6 +35,9 @@ babel = Babel(
     locale_selector=get_locale,
     default_locale=os.environ.get("BABEL_DEFAULT_LOCALE"),
 )
+
+# Set the printer as online when the app starts
+set_printer_is_online(True)
 
 
 @app.cli.command("print-now")
