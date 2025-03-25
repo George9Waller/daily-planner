@@ -141,3 +141,13 @@ envFrom:
 postgresql:
   database: daily-planner-db
   username: db-user
+
+redis:
+  master:
+    persistence:
+      enabled: false
+  replica:
+    replicaCount: 0
+  auth:
+    existingSecret: daily-planner-aws-secrets
+    existingSecretKey: REDIS_PASSWORD

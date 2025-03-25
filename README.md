@@ -22,6 +22,7 @@ pip install -r requirements.txt
 - `HABITICA_API_TOKEN`
 - `REDIS_HOST`
 - `REDIS_PORT`
+- `REDIS_PASSWORD`
 
 # Scripts
 ## `makemigrations`
