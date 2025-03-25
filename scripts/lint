@@ -1,0 +1,12 @@
+#!bin/bash
+
+source env/bin/activate
+
+echo "Black"
+black --check .
+
+echo "isort"
+isort --check .
+
+echo "Helm"
+helm lint helm --strict

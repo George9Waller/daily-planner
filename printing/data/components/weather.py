@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 
 from flask_babel import format_time
 
-from printing.data.dataclasses import Weather, PrintDataContext
+from printing.data.dataclasses import PrintDataContext, Weather
 from printing.data.decorators import cached, returns_data_as
 from printing.data.utils import make_request
 

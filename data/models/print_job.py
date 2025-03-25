@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
-from typing import Optional, Literal
+from typing import Literal, Optional
 
-from sqlalchemy import DateTime, JSON
+from sqlalchemy import JSON, DateTime
 from sqlalchemy.orm import Mapped, mapped_column
 
 from data import db

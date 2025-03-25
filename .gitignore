@@ -9,6 +9,8 @@ env/**
 messages.pot
 .pot
 
+helm/charts/*
+
 img.png
 get_helm.sh
 dump.rdb

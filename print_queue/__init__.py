@@ -2,6 +2,7 @@ import logging
 import os
 import time
 from datetime import datetime, timedelta, timezone
+
 from sqlalchemy import update
 
 from cache.actions import set_printer_is_online

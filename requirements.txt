@@ -30,9 +30,10 @@ pathspec==0.12.1
 pillow==11.1.0
 platformdirs==4.3.6
 psycopg2==2.9.10
+pycodestyle==2.12.1
 pydantic==2.10.6
 pydantic_core==2.27.2
-pylint==3.3.4
+pyflakes==3.2.0
 python-barcode==0.15.1
 python-dotenv==1.0.1
 python-escpos==3.1

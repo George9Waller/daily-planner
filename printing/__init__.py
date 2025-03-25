@@ -1,9 +1,1 @@
-COMPONENTS = [
-    "greeting",
-    "day",
-    "weather",
-    "todos",
-    "dailies",
-    "habits",
-    "reflection"
-]
+COMPONENTS = ["greeting", "day", "weather", "todos", "dailies", "habits", "reflection"]

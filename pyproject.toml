@@ -1,0 +1,7 @@
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+extend_skip = ["migrations"]
+
+[tool.black]
+extend_exclude = "migrations"
