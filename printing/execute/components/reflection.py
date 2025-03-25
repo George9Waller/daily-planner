@@ -7,7 +7,9 @@ from printing.execute.components.utils import center, divider
 
 def print_reflection(p: Usb, print_data: HabiticaTasks):
     p.textln("")
-    p.set_with_default(align="center", double_height=True, double_width=True, bold=True, font="b")
+    p.set_with_default(
+        align="center", double_height=True, double_width=True, bold=True, font="b"
+    )
     p.textln(_("print.Reflection"))
     p.set_with_default(align="center")
     divider(p, "░")

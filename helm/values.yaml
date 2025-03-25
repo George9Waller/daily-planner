@@ -147,6 +147,8 @@ redis:
     persistence:
       enabled: false
   replica:
+    serviceAccount:
+      create: false
     replicaCount: 0
   auth:
     existingSecret: daily-planner-aws-secrets

@@ -2,9 +2,9 @@ import requests
 from requests.exceptions import HTTPError, Timeout
 from tenacity import (
     retry,
+    retry_if_exception,
     stop_after_attempt,
     wait_exponential_jitter,
-    retry_if_exception,
 )
 
 RETRY_ON_STATUS_CODES = [429, 408, 500, 502, 503, 504]

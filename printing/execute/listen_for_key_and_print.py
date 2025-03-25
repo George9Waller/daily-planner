@@ -2,7 +2,7 @@ import logging
 import os
 import subprocess
 
-from evdev import categorize, ecodes, InputDevice
+from evdev import InputDevice, categorize, ecodes
 
 logger = logging.getLogger(__name__)
 

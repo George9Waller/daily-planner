@@ -1,11 +1,11 @@
 import base64
 import io
 from typing import Optional
-from typing_extensions import Annotated
 
 from dominate.tags import br, div, hr, img, span
 from PIL import Image
 from pydantic import AfterValidator, BaseModel, Field
+from typing_extensions import Annotated
 
 
 class ConnectionClosedError(Exception):
@@ -182,9 +182,13 @@ class Span(Element):
 
 class HorizontalRule(Element):
     def render(self, scale):
-        with div(style="width:100%; font-family: noway-icons; display: flex; align-items: center; margin-top: 0.5rem;"):
-            with div(style="transform: rotate(90deg); width: fit-content; margin-right: 0.4rem;"):
-                span("\u00B0")
+        with div(
+            style="width:100%; font-family: noway-icons; display: flex; align-items: center; margin-top: 0.5rem;"
+        ):
+            with div(
+                style="transform: rotate(90deg); width: fit-content; margin-right: 0.4rem;"
+            ):
+                span("\u00b0")
             div(style="border: 1px dashed black; flex: 1; height: 0;")
 
 

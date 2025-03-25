@@ -2,9 +2,9 @@ import json
 import os
 from datetime import date, datetime, timedelta, timezone
 
+from data import db, models
 from printing.data import get_print_data
 from printing.data.dataclasses import PrintDataContext
-from data import db, models
 
 
 def create_instant_print_job(*, locale):
