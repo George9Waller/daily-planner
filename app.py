@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, request
 from flask_babel import Babel
+from whitenoise import WhiteNoise
 
 import routes
 from actions.printing import create_instant_print_job
@@ -17,6 +18,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
 db.init_app(app)
 migrate.init_app(app, db)
+app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="static/")
 
 app.add_url_rule("/", view_func=routes.home)
 app.add_url_rule("/print", view_func=routes.print_now, methods=["POST"])
