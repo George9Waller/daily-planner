@@ -8,5 +8,5 @@ data:
   HABITICA_USER_ID: 4d2d5719-ee22-45bf-9feb-5413cdc5764b
   PRINT_THRESHOLD_MINUTES: "5"
   TRIGGER_KEY: KEY_P
-  REDIS_PORT: 6379
+  REDIS_PORT: "6379"
   REDIS_HOST: "{{ .Release.Name }}-redis-master"
