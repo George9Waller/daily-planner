@@ -1,5 +1,11 @@
 # What is it?
-todo
+A service that connects to a receipt printer to print a daily planning note. It has modules for the date, a greeting, [Habitica](https://habitica.com/) integration (todos and habits) and notes.
+
+The service is split up into processes for printing, fetching data and a web ui displaying print status and a visual representation of the latest reciept.
+
+I deployed the project in kubernetes on a cluster to learn how all of that works. The helm charts are in this repo and integrate with my global charts in https://github.com/George9Waller/helm
+
+Inspired by https://amanvir.com/guten
 
 # Setup
 ```
