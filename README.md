@@ -7,6 +7,10 @@ I deployed the project in kubernetes on a cluster to learn how all of that works
 
 Inspired by https://amanvir.com/guten
 
+![image](https://github.com/user-attachments/assets/2aa1a3a4-22be-4633-845f-c8949dfb2ea4)
+![image](https://github.com/user-attachments/assets/d0c84f10-c993-4750-9cc4-859c315bd1f1)
+
+
 # Setup
 ```
 python3 -m venv env
